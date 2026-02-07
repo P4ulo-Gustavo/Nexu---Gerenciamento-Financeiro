@@ -1,0 +1,89 @@
+nexu/
+│
+├── main.py                          # Ponto de entrada da aplicação
+├── requirements.txt                 # Dependências do projeto
+├── .env.example                     # Exemplo de variáveis de ambiente
+├── README.md                        # Documentação do projeto
+│
+├── assets/                          # Recursos estáticos
+│   ├── icons/                       # Ícones da interface
+│   ├── images/                      # Imagens e logos
+│   └── fonts/                       # Fontes customizadas
+│
+├── config/                        # Scripts e configurações do banco
+│   ├── __init__.py
+│   ├── connection.py                # Gerenciamento de conexão com PostgreSQL
+│   ├── schema.sql                   # Script de criação das tabelas
+│   └── seed.sql                     # Dados iniciais (categorias padrão)
+│
+├── models/                          # Camada Model (Dados)
+│   ├── __init__.py
+│   ├── base_model.py                # Classe base para modelos
+│   ├── usuario.py                   # Model de usuário
+│   ├── transacao.py                 # Model de transações (gastos/receitas)
+│   ├── categoria.py                 # Model de categorias
+│   ├── orcamento.py                 # Model de orçamentos
+│   └── meta.py                      # Model de metas financeiras
+│
+├── controllers/                     # Camada Controller (Lógica de Negócio)
+│   ├── __init__.py
+│   ├── auth_controller.py           # Controle de autenticação
+│   ├── transacao_controller.py      # Controle de transações
+│   ├── categoria_controller.py      # Controle de categorias
+│   ├── dashboard_controller.py      # Controle do dashboard/relatórios
+│   ├── orcamento_controller.py      # Controle de orçamentos
+│   └── exportacao_controller.py     # Controle de exportação de dados
+│
+├── views/                           # Camada View (Interface)
+│   ├── __init__.py
+│   ├── base_view.py                 # Classe base para views
+│   │
+│   ├── components/                  # Componentes reutilizáveis
+│   │   ├── __init__.py
+│   │   ├── sidebar.py               # Menu lateral
+│   │   ├── header.py                # Cabeçalho
+│   │   ├── card.py                  # Cards de informação
+│   │   ├── table.py                 # Tabela customizada
+│   │   ├── modal.py                 # Janelas modais
+│   │   └── charts.py                # Gráficos (matplotlib)
+│   │
+│   ├── screens/                     # Telas principais
+│   │   ├── __init__.py
+│   │   ├── login_screen.py          # Tela de login
+│   │   ├── register_screen.py       # Tela de cadastro
+│   │   ├── dashboard_screen.py      # Tela principal (dashboard)
+│   │   ├── transacoes_screen.py     # Tela de transações
+│   │   ├── categorias_screen.py     # Tela de categorias
+│   │   ├── orcamentos_screen.py     # Tela de orçamentos
+│   │   ├── relatorios_screen.py     # Tela de relatórios
+│   │   └── configuracoes_screen.py  # Tela de configurações
+│   │
+│   └── styles/                      # Estilos e temas
+│       ├── __init__.py
+│       ├── colors.py                # Paleta de cores
+│       ├── themes.py                # Temas (claro/escuro)
+│       └── fonts.py                 # Configuração de fontes
+│
+├── utils/                           # Utilitários
+│   ├── __init__.py
+│   ├── validators.py                # Validadores (email, CPF, valores)
+│   ├── formatters.py                # Formatadores (moeda, data)
+│   ├── date_utils.py                # Utilitários de data
+│   ├── encryption.py                # Criptografia de senha
+│   └── logger.py                    # Sistema de logs
+│
+├── services/                        # Serviços auxiliares
+│   ├── __init__.py
+│   ├── pdf_service.py               # Geração de relatórios em PDF
+│   ├── excel_service.py             # Exportação para Excel
+│   ├── email_service.py             # Envio de emails (futuro)
+│   └── ai_service.py                # Serviço de IA (futuro)
+│
+├── tests/                           # Testes
+│   ├── __init__.py
+│   ├── test_models/
+│   ├── test_controllers/
+│   └── test_utils/
+│
+└── logs/                            # Arquivos de log
+    └── .gitkeep
